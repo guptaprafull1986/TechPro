@@ -1,1 +1,1 @@
-# This repository is Tech Pro series questions set to prepare data structure.
+# This repository contains set of questions to prepare data structure.
