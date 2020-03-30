@@ -1,1 +1,1 @@
-# This repository contains set of questions to prepare data structure.
+# This repository contains question set to prepare data structure.
