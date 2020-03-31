@@ -9,10 +9,10 @@
  * <p>
  * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
  * Output: 7 -> 0 -> 8
+ * Explanation: 342 + 465 = 807.
  * <p>
  * Input: (2 -> 4 -> 3) + (5 -> 6 -> 9 -> 9 -> 9)
  * Output: 7 -> 0 -> 3 -> 0 -> 0 -> 1
- * Explanation: 342 + 465 = 807.
  */
 public class AddTwoLinkedList {
     public static void main(String[] args) {
