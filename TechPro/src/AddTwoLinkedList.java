@@ -9,6 +9,9 @@
  * <p>
  * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
  * Output: 7 -> 0 -> 8
+ * <p>
+ * Input: (2 -> 4 -> 3) + (5 -> 6 -> 9 -> 9 -> 9)
+ * Output: 7 -> 0 -> 3 -> 0 -> 0 -> 1
  * Explanation: 342 + 465 = 807.
  */
 public class AddTwoLinkedList {
@@ -19,12 +22,23 @@ public class AddTwoLinkedList {
 
         Node list2 = new Node(5);
         list2.next = new Node(6);
+        list2.next.next = new Node(4);
+
+
+        Node result = addTwoLinkedList(list1, list2);
+        printList(result);
+
+        list1 = new Node(2);
+        list1.next = new Node(4);
+        list1.next.next = new Node(3);
+
+        list2 = new Node(5);
+        list2.next = new Node(6);
         list2.next.next = new Node(9);
         list2.next.next.next = new Node(9);
         list2.next.next.next.next = new Node(9);
 
-
-        Node result = addTwoLinkedList(list1, list2);
+        result = addTwoLinkedList(list1, list2);
         printList(result);
     }
 
