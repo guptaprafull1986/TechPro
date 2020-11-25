@@ -1,0 +1,5 @@
+package kotlinetraining
+
+class DataType {
+
+}

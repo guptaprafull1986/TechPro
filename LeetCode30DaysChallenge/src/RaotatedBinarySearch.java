@@ -35,27 +35,27 @@ public class RaotatedBinarySearch {
         return -1;
     }
 
-    static int getPivot(int[] nums, int start, int end) {
-        if (start > end) {
+    static int getPivot(int[] nums, int low, int high) {
+        if (low > high) {
             return -1;
         }
 
-        if (start == end) {
-            return start;
+        if (low == high) {
+            return low;
         }
 
-        int mid = start + (end - start) / 2;
-        if (mid < end && nums[mid] > nums[mid + 1]) {
+        int mid = low + (high - low) / 2;
+        if (mid < high && nums[mid] > nums[mid + 1]) {
             return mid;
         }
 
-        if (mid > 0 && nums[mid] < nums[mid - 1]) {
+        if (mid > low && nums[mid] < nums[mid - 1]) {
             return mid - 1;
         }
 
-        if (nums[start] >= nums[mid]) {
-            return getPivot(nums, start, mid - 1);
+        if (nums[low] >= nums[mid]) {
+            return getPivot(nums, low, mid - 1);
         }
-        return getPivot(nums, mid + 1, end);
+        return getPivot(nums, mid + 1, high);
     }
 }
